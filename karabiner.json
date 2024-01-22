@@ -285,11 +285,11 @@
                         ]
                     },
                     {
-                        "description": "Hyper+u to Open ProtonVPN",
+                        "description": "Hyper+y to Open ProtonVPN",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "y",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -309,11 +309,11 @@
                         ]
                     },
                     {
-                        "description": "Hyper+y to Open VLC",
+                        "description": "Hyper+u to Open VLC",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "y",
+                                    "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
