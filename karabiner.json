@@ -526,28 +526,7 @@
                         ]
                     },
                     {
-                        "description": "Right Command to Escape if pressed alone",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "right_command"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_command"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Right Shift to Mouse Middle Click or Command+Delete in Preview and Finder Apps if pressed alone",
+                        "description": "Right Shift to Mouse Middle Click or Command+Delete in Preview if pressed alone",
                         "manipulators": [
                             {
                                 "from": {
@@ -566,7 +545,7 @@
                                 "conditions": [
                                     {
                                         "type": "frontmost_application_unless",
-                                        "bundle_identifiers": ["^com\\.apple\\.Preview$", "^com\\.apple\\.finder$"]
+                                        "bundle_identifiers": ["^com\\.apple\\.Preview$"]
                                     }
                                 ],
                                 "type": "basic"
@@ -589,7 +568,57 @@
                                 "conditions": [
                                     {
                                         "type": "frontmost_application_if",
-                                        "bundle_identifiers": ["^com\\.apple\\.Preview$", "^com\\.apple\\.finder$"]
+                                        "bundle_identifiers": ["^com\\.apple\\.Preview$"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Right command to escape or Command+Delete in Finder if pressed alone",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_command"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": ["^com\\.apple\\.finder$"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_command"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": ["^com\\.apple\\.finder$"]
                                     }
                                 ],
                                 "type": "basic"
