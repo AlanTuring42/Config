@@ -505,15 +505,15 @@
                         ]
                     },
                     {
-                        "description": "Left Command to Escape if pressed alone",
+                        "description": "Right Command to Escape if pressed alone",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "left_command"
+                                    "key_code": "right_command"
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_command"
+                                        "key_code": "right_command"
                                     }
                                 ],
                                 "to_if_alone": [
@@ -576,15 +576,15 @@
                         ]
                     },
                     {
-                        "description": "Right command to escape or Command+Delete in Finder if pressed alone",
+                        "description": "Left command to escape or Command+Delete in Finder if pressed alone",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "right_command"
+                                    "key_code": "left_command"
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_command"
+                                        "key_code": "left_command"
                                     }
                                 ],
                                 "to_if_alone": [
@@ -602,11 +602,11 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "right_command"
+                                    "key_code": "left_command"
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_command"
+                                        "key_code": "left_command"
                                     }
                                 ],
                                 "to_if_alone": [
