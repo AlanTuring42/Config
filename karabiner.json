@@ -309,11 +309,11 @@
                         ]
                     },
                     {
-                        "description": "Hyper+h to Open Preview",
+                        "description": "Hyper+w to Open Preview",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "h",
+                                    "key_code": "w",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
