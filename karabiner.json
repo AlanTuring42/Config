@@ -547,7 +547,7 @@
                         ]
                     },
                     {
-                        "description": "Left command to Mouse Middle Click or Command+Delete in Preview and Finder Apps if pressed alone",
+                        "description": "Left Command to Escape if pressed alone",
                         "manipulators": [
                             {
                                 "from": {
@@ -563,6 +563,22 @@
                                         "key_code": "escape"
                                     }
                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Left Shift to Command+Delete in Preview and Finder if pressed alone",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_shift"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
                                 "conditions": [
                                     {
                                         "type": "frontmost_application_unless",
@@ -573,11 +589,11 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "left_command"
+                                    "key_code": "left_shift"
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_command"
+                                        "key_code": "left_shift"
                                     }
                                 ],
                                 "to_if_alone": [
