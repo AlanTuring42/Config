@@ -738,6 +738,33 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Map Left Shift to Delete Current File in IINA",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": {
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com.colliderli.iina$"
+                                        ]
+                                    }
+                                ],
+                                "to": [
+                                    {
+                                        "shell_command": "osascript -e 'tell application \"IINA\" to activate' -e 'tell application \"System Events\" to tell process \"IINA\" to click menu item \"Delete Current File\" of menu \"File\" of menu bar 1'"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
