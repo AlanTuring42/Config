@@ -740,6 +740,30 @@
                         ]
                     },
                     {
+                        "description": "Toggle Bluetooth with Command+B",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "if [ $(/usr/local/bin/blueutil -p) -eq 1 ]; then /usr/local/bin/blueutil --disconnect c2-b4-28-07-08-d3 && /usr/local/bin/blueutil -p 0; else /usr/local/bin/blueutil -p 1 && sleep 1 && /usr/local/bin/blueutil --connect c2-b4-28-07-08-d3; fi"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map Left Shift to Delete Current File in IINA",
                         "manipulators": [
                             {
