@@ -740,6 +740,222 @@
                         ]
                     },
                     {
+                      "description": "Map Command+B to Duplicate Tab in Chrome",
+                      "manipulators": [
+                        {
+                          "type": "basic",
+                          "from": {
+                            "key_code": "b",
+                            "modifiers": {
+                              "mandatory": ["command"]
+                            }
+                          },
+                          "to": [
+                            {
+                              "shell_command": "osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"System Events\" to click menu item \"Duplicate Tab\" of menu \"Tab\" of menu bar 1 of process \"Google Chrome\"'"
+                            }
+                          ],
+                          "conditions": [
+                            {
+                              "type": "frontmost_application_if",
+                              "bundle_identifiers": [
+                                "^com\\.google\\.Chrome$"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "description": "Map Command+T to New Tab to the Right in Chrome",
+                      "manipulators": [
+                        {
+                          "type": "basic",
+                          "from": {
+                            "key_code": "t",
+                            "modifiers": {
+                              "mandatory": ["command"]
+                            }
+                          },
+                          "to": [
+                            {
+                              "shell_command": "osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"System Events\" to click menu item \"New Tab to the Right\" of menu \"Tab\" of menu bar 1 of process \"Google Chrome\"'"
+                            }
+                          ],
+                          "conditions": [
+                            {
+                              "type": "frontmost_application_if",
+                              "bundle_identifiers": [
+                                "^com\\.google\\.Chrome$"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                        "description": "Map Command+I to Extensions in Chrome",
+                        "manipulators": [
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "i",
+                              "modifiers": {
+                                "mandatory": ["command"]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"System Events\" to click menu item \"Extensions\" of menu \"Window\" of menu bar 1 of process \"Google Chrome\"'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "frontmost_application_if",
+                                "bundle_identifiers": [
+                                  "^com\\.google\\.Chrome$"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                    },
+                    {
+                        "description": "Map Command+M to Move Tab to New Window in Chrome",
+                        "manipulators": [
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "m",
+                              "modifiers": {
+                                "mandatory": ["command"]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"System Events\" to click menu item \"Move Tab to New Window\" of menu \"Tab\" of menu bar 1 of process \"Google Chrome\"'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "frontmost_application_if",
+                                "bundle_identifiers": [
+                                  "^com\\.google\\.Chrome$"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                    },
+                    {
+                        "description": "Map Control+W to Close Tabs to the Right in Chrome",
+                        "manipulators": [
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "w",
+                              "modifiers": {
+                                "mandatory": ["control"]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"System Events\" to click menu item \"Close Tabs to the Right\" of menu \"Tab\" of menu bar 1 of process \"Google Chrome\"'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "frontmost_application_if",
+                                "bundle_identifiers": [
+                                  "^com\\.google\\.Chrome$"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                    },
+                    {
+                        "description": "Map Control+Q to Close Other Tabs in Chrome",
+                        "manipulators": [
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "q",
+                              "modifiers": {
+                                "mandatory": ["control"]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"System Events\" to click menu item \"Close Other Tabs\" of menu \"Tab\" of menu bar 1 of process \"Google Chrome\"'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "frontmost_application_if",
+                                "bundle_identifiers": [
+                                  "^com\\.google\\.Chrome$"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                    },
+                    {
+                        "description": "Map Command+R to Rename in Finder",
+                        "manipulators": [
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "r",
+                              "modifiers": {
+                                "mandatory": ["command"]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "osascript -e 'tell application \"Finder\" to activate' -e 'tell application \"System Events\" to click menu item \"Rename\" of menu \"File\" of menu bar 1 of process \"Finder\"'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "frontmost_application_if",
+                                "bundle_identifiers": [
+                                  "^com\\.apple\\.finder$"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                    },
+                    {
+                        "description": "Map Command+R to Rename in Preview",
+                        "manipulators": [
+                          {
+                            "type": "basic",
+                            "from": {
+                              "key_code": "r",
+                              "modifiers": {
+                                "mandatory": ["command"]
+                              }
+                            },
+                            "to": [
+                              {
+                                "shell_command": "osascript -e 'tell application \"Preview\" to activate' -e 'tell application \"System Events\" to click menu item \"Rename…\" of menu \"File\" of menu bar 1 of process \"Preview\"'"
+                              }
+                            ],
+                            "conditions": [
+                              {
+                                "type": "frontmost_application_if",
+                                "bundle_identifiers": [
+                                  "^com\\.apple\\.Preview$"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                    },                                                                                                                                                                            
+                    {
                         "description": "Toggle Bluetooth with Command+B",
                         "manipulators": [
                             {
