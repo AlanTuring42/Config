@@ -568,51 +568,6 @@
                         ]
                     },
                     {
-                        "description": "Left Shift to Command+Delete in Preview and Finder if pressed alone",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_shift"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_unless",
-                                        "bundle_identifiers": ["^com\\.apple\\.Preview$", "^com\\.apple\\.finder$"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "left_shift"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_if",
-                                        "bundle_identifiers": ["^com\\.apple\\.Preview$", "^com\\.apple\\.finder$"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Fn to close the window if pressed alone",
                         "manipulators": [
                           {
